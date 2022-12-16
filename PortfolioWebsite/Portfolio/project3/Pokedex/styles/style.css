@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: 'upheavtt';
+}
+
+body {
+  background-image: url('../media/images/background.png');
+  z-index: -999;
+  color: whitesmoke;
+}
+
+@font-face {
+  src: url('../media/upheavtt.ttf');
+  font-family: 'upheavtt';
+  font-weight: bold;
+  font-style: normal;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas:
+    "head"
+    "main"
+    "content"
+    "foot";
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-columns: auto;
+}
+
+#page>header {
+  grid-area: head;
+  padding: 2rem 3rem;
+  background: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  margin: 0px 10%;
+}
+
+header>img {
+  width: 30%;
+}
+
+#page>section {
+  border-radius: 35px;
+  background: rgb(15, 15, 15);
+  padding: 30px;
+  height: auto;
+  margin: 30px 200px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+#page>main {
+  grid-area: main;
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 4px 100px;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  text-align: center;
+  font-size: 10px;
+  color: whitesmoke;
+}
+
+.entry {
+  display: flex;
+  justify-content: center;
+}
+
+.entry #stats {
+  font-size: 20px;
+  text-align: left;
+}
+
+.entry #pokemon {
+  justify-content: center;
+  padding: 70px 40px;
+}
+
+.entry #input {
+  text-align: right;
+}
+
+.result {
+  margin: 10px;
+}
+
+#page>footer {
+  grid-area: foot;
+  padding: 30px;
+  margin: 10px 40px;
+  padding: 2rem 3rem;
+  background: rgb(15, 15, 15);
+  display: flex;
+  color: whitesmoke;
+  font-size: 20px;
+  justify-content: space-around;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#name {
+  padding: 10px;
+  font-size: 30px;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+  font-size: 9.5pt;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+button:active {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+}
+
+button:focus {
+  outline: 0;
+}
+
+h1,
+a,
+h2 {
+  justify-self: center;
+}
+
+p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,445 @@
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(16, 16, 16);
+    color: white;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 30% 30% auto;
+        grid-template-areas:
+            "header header sidebar"
+            "section article sidebar"
+            "aboutMe aboutMe aboutMe"
+            "footer footer footer"
+    }
+}
+
+/*HEADER code*/
+header {
+    grid-area: header;
+}
+
+button {
+    display: inline-block;
+    margin-left: 85%;
+}
+
+small {
+    color: white;
+}
+
+.headers {
+    font-family: 'Pekora';
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgb(16, 16, 16);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.navigation {
+    padding: 10px 10px;
+    background: rgb(16, 16, 16);
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 99;
+}
+
+.one {
+    flex: 3;
+}
+
+.two {
+    flex: 1;
+}
+
+.three {
+    flex: 1;
+}
+
+.four {
+    flex: 1;
+}
+
+.five {
+    flex: 1;
+}
+
+/* unvisited link */
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(209, 120, 46);
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/*End of header code*/
+
+
+/*DEVELOPMENT section*/
+section {
+    grid-area: section;
+}
+
+.section {
+    margin-left: 50px;
+    padding-top: 40px;
+    overflow: visible;
+}
+
+/*End of development section*/
+
+
+/*KEY FEATURES section*/
+article {
+    background-color: rgb(209, 120, 46);
+    padding: 20px;
+    text-align: left;
+    font-weight: 300;
+    grid-area: article;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/*End of key feautures section*/
+
+/*SIDEBAR section*/
+aside {
+    grid-area: sidebar;
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 20%;
+}
+
+
+li::before {
+    content: "■";
+    display: inline-block;
+    width: 1em;
+    margin-left: 1px;
+    margin-top: 10px;
+    color: rgb(209, 120, 46);
+}
+
+/*end of sidbar section*/
+
+/*FOOTER area*/
+footer {
+    grid-area: footer;
+    text-align: left;
+    font-size: 15pt;
+    color: rgb(16, 16, 16);
+    ;
+    padding-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: left;
+    width: 100vw;
+    text-align: center;
+}
+
+#footer {
+    background-color: rgb(16, 16, 16);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    /* Footer height */
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.text {
+    flex-grow: .1;
+    font-size: 30px;
+    position: relative;
+    bottom: 8px;
+}
+
+.link1 {
+    flex-grow: .03;
+}
+
+.link2 {
+    flex-grow: .03;
+}
+
+.link3 {
+    flex-grow: .03;
+}
+
+.link4 {
+    flex-grow: .03;
+}
+
+/*end of footer*/
+
+/*General body styling*/
+section,
+aside,
+article {
+    padding: .5rem;
+    font-family: Tanseek;
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+p {
+    justify-content: space-between;
+}
+
+h1,
+h2 {
+    margin-top: 0%;
+    font-size: 40px;
+    font-family: univers85;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 30px;
+}
+
+/*end of styling*/
+
+
+/*Images*/
+img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.image {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    flex-wrap: wrap;
+}
+
+.secondImage img {
+    transform: rotate(15deg);
+    width: 100%;
+    margin-left: 15%;
+}
+
+/*end of images*/
+
+
+/*ABOUT ME page*/
+section:nth-of-type(2) {
+    grid-area: aboutMe;
+    background-color: rgb(16, 16, 16);
+    position: relative;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+
+.item1>img {
+    width: 250px;
+}
+
+.item1 {
+    flex-grow: 0;
+    padding: 30px;
+    margin-left: 10%;
+}
+
+.item2 {
+    flex-grow: 1;
+    padding-top: 100px;
+    margin-right: 10%;
+    margin-left: 5%
+}
+
+
+/*Handles elements at smaller screen*/
+@media (max-width: 760px) {
+
+    #wrapper {
+        display: grid;
+        height: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "section"
+            "article"
+            "aboutMe"
+            "footer"
+    }
+
+    .item1>img {
+        display: none;
+    }
+
+    .item1 {
+        width: 10px;
+        flex-grow: 0;
+        padding: 5px 0px;
+    }
+
+    .item2 {
+        flex-grow: 1;
+        padding-top: 50px;
+        margin-right: 10%;
+        margin-left: 5%
+    }
+
+    article {
+        padding: 20px 40px;
+        margin-top: 0px;
+    }
+
+    .image {
+        margin-bottom: 90px;
+    }
+
+    aside {
+        margin-top: 0%;
+    }
+
+    .secondImage {
+        transform: rotate(90deg);
+        width: 100%;
+    }
+
+    section {
+        grid-area: section;
+        padding-top: 10px;
+        overflow: visible;
+    }
+
+    .secondImage img {
+        transform: rotate(-90deg);
+        height: 90%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    /*Header at smaller screen*/
+    .navigation {
+        display: none;
+    }
+
+    .one {
+        flex: 2;
+    }
+
+    .two {
+        flex: 2;
+    }
+
+    .three {
+        flex: 2;
+    }
+
+    .four {
+        flex: 2;
+    }
+
+    .five {
+        flex: 2;
+    }
+
+
+}

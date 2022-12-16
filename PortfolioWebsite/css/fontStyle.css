@@ -1,0 +1,56 @@
+@font-face {
+    src: url('../media/Pekora\ Light.otf');
+    font-family: 'Pekora';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src: url('../media/Univers\ 85\ Extra\ Black\ Regular.otf');
+    font-family: 'univers85';
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    src: url('../media/Tanseek\ Modern\ Pro\ Arabic\ Book.otf');
+    font-family: 'Tanseek';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.links {
+    grid-area: links;
+    padding: 30px 50px;
+    color: #ffffff;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 99;
+}
+
+.one {
+    flex: 6;
+}
+
+.two {
+    flex: 1;
+}
+
+.three {
+    flex: 1;
+}
+
+.four {
+    flex: 1;
+}
+
+.five {
+    flex: 1;
+}
